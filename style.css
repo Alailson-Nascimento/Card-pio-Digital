@@ -12,6 +12,7 @@ header {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -35,21 +36,29 @@ header {
 }
 
 .menu-navegacao a:hover {
-  background-color: rgb(129, 73, 180);
+  /* background-color: rgb(129, 73, 180);
   color: rgb(240, 232, 232);
   padding: 8px;
   border-radius: 8px;
-  transition: 1s;
+  transition: 1s; */
+
+  color: rgb(129, 73, 180);
 }
 
 .botao-login {
   background-color: rgb(129, 73, 180);
   color: rgb(240, 232, 232);
   border: none;
-  padding: 10px 22px;
-  border-radius: 8px;
+  padding: 10px 24px;
+  border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(129, 73, 180, 0.3);
+}
+
+.botao-login:hover {
+  background: linear-gradient(135deg, rgb(160, 100, 200), rgb(129, 73, 180));
+  transform: scale(1.05);
 }
 main {
   display: flex;
@@ -58,10 +67,21 @@ main {
 
 .produto {
   background-color: rgb(240, 232, 232);
+  
   padding: 20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.produto:hover {
+
+  /* transform: translateY(-5px);Move o elemento 5 pixels para CIMA no eixo Y (vertical) */
+  transform: translateY(-5px);
+
+  /* box-shadow: cria uma sombra atrás do elemento */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .nome {
@@ -78,11 +98,16 @@ main {
 }
 
 .img-produto {
+  /* width: 100%; */
+  /* max-width: 150px; */
+  /* border-radius: 5px; */
+  /* margin: 10px 0;  */
   width: 100%;
-  max-width: 150px;
-  border-radius: 5px;
+  height: 180px;
 
-  margin: 10px 0;
+  /* object-fit: cover; Faz a imagem preencher todo o espaço do container */
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .descricao {
@@ -107,4 +132,11 @@ main {
   margin-top: 20px;
 
   border-radius: 10px;
+}
+
+.produto,
+.botao-login,
+.menu-navegacao a {
+  /* faz qualquer mudança de estilo acontecer de forma suave e gradual em 0.3 segundos */
+  transition: all 0.3s ease;
 }
